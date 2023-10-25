@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+// * font face
+
+@font-face {
+  font-family: RobotoSlab-Medium;
+  src: url("/font/Roboto_Slab/static/RobotoSlab-Medium.ttf");
+}
+
+@font-face {
+  font-family: RobotoSlab-Bold;
+  src: url("/font/Roboto_Slab/static/RobotoSlab-Bold.ttf");
+}
+
+@font-face {
+  font-family: RobotoSlab-Black;
+  src: url("/font/Roboto_Slab/static/RobotoSlab-Black.ttf");
+}
+
+// * mixins
+
+@mixin text-style($ff, $fz, $c) {
+  font-family: $ff;
+  font-size: $fz;
+  color: $c;
+}
+
+// * variablen
+
+$tc: #333333; // text color
+$hc: #ffca41; // highlight color yellow
+$hc2: rgba(51, 51, 51, 0.5); // highlight color grey
+
+$m: RobotoSlab-Medium, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$b: RobotoSlab-Bold, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$bl: RobotoSlab-Black, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+//  * global classes
+
+.button-style {
+  @include text-style($m, 20px, #fff);
+  background-color: $hc;
+  text-decoration: none;
+  padding: 3px 20px;
+  border-radius: 20px;
+}
+
+// * genereal element style
+
+h1 {
+  @include text-style($m, 30px, $tc);
+}
+
+h2 {
+  @include text-style($bl, 18px, $hc);
+}
+
+h3 {
+  @include text-style($m, 15px, $tc);
+}
+
+p {
+  @include text-style($m, 13px, $hc2);
+}
+
+div.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.back {
+  margin: 0 50px;
+}
+
+// * components style ************************************************
+
+// - nav card -------------------------------------------
+
+section.nav-card {
+  margin: 40px auto;
+
+  article {
+    width: 90vw;
+    margin: 0 auto;
+
+    div.bg-container {
+      position: relative;
+
+      height: auto;
+      margin: 0 25px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      a {
+        display: block;
+        height: 300px;
+      }
+
+      div.option {
+        background-color: $hc;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 5px 10px;
+
+        h1 {
+          @include text-style($b, 30px, #fff);
+        }
+      }
+    }
+
+    p.nav-text {
+      @include text-style($m, 18px, $tc);
+      margin: 5px 25px;
+    }
+  }
+}
+
+// - beer card -------------------------------------------
+
+article.beer-card {
+  border-bottom: 2px solid gray;
+  width: 95vw;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+
+  //   : img ------------------------------------------
+  div.img-container {
+    margin: 0 auto;
+    img.product-img {
+      height: 191px;
+      margin: 0 auto;
+    }
+  }
+
+  //   : text ------------------------------------------
+  div.text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+
+    a {
+      @extend .button-style;
+    }
+  }
+}
+// - footer -------------------------------------------
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: $hc;
+  height: 70px;
+  width: 100vw;
+
+  a {
+    display: block;
+    height: 70px;
+    div {
+      position: relative;
+      width: 57px;
+      height: 57px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: 7px auto;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+// * pages style ***************************************************
+
+section.beer-list {
+  padding-bottom: 70px;
+  div {
+    margin: 40px 0;
+  }
+}
+
+section.beer-detail {
+  padding-bottom: 120px;
+
+  article {
+    padding: 50px;
+
+    div.product {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      div.img-container {
+        margin: 0 auto;
+        img {
+          height: 400px;
+        }
+      }
+
+      h1 {
+        font-size: 52px;
+      }
+    }
+  }
+}
