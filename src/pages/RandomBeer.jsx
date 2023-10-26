@@ -1,6 +1,4 @@
-// der code für random beer funktioniert noch nicht richtig.
-// a) der datensatz wird immer mehrmals geaden
-// b) die ID wird nicht an die App.jsx für den pfad übergeben
+//  der datensatz wird immer mehrmals geaden -> fehler kommt vonder api
 
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
@@ -8,24 +6,14 @@ import Footer from "../components/Footer";
 
 const RandomBeer = () => {
   const [randomBeer, setRandomBeer] = useState();
-  const [randomID, setRandomID] = useState();
 
   useEffect(() => {
     fetch("https://ih-beers-api2.herokuapp.com/beers/random")
       .then((response) => response.json())
-      .then((data) => {
-        setRandomBeer(data);
-        setRandomID(data._id);
-      })
-
+      .then((data) => setRandomBeer(data))
       .catch((error) => console.error("product data fetching error:", error));
   }, []);
-
-  console.log({ randomID });
   console.log({ randomBeer });
-
-  //   id als params übergeben
-  // const { _id } = useParams();
 
   return (
     <>

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const BeerCard = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <article className="beer-card">
       <div className="img-container">

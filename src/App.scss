@@ -69,6 +69,10 @@ p {
   @include text-style($m, 13px, $hc2);
 }
 
+// section {
+//   max-width: 576px;
+// }
+
 div.stats {
   display: flex;
   justify-content: space-between;
@@ -84,9 +88,10 @@ div.back {
 
 section.nav-card {
   margin: 40px auto;
+  max-width: 576px;
 
   article {
-    width: 90vw;
+    width: 90%;
     margin: 0 auto;
 
     div.bg-container {
@@ -127,7 +132,7 @@ section.nav-card {
 
 article.beer-card {
   border-bottom: 2px solid gray;
-  width: 95vw;
+  width: 95%;
   margin: 40px auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -159,9 +164,13 @@ article.beer-card {
 footer {
   position: fixed;
   bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
   background-color: $hc;
   height: 70px;
-  width: 100vw;
+  width: 100%;
+  max-width: 576px;
+  margin: 0 auto;
 
   a {
     display: block;
@@ -188,6 +197,9 @@ footer {
 
 section.beer-list {
   padding-bottom: 70px;
+  max-width: 576px;
+  margin: 0 auto;
+
   div {
     margin: 40px 0;
   }
@@ -195,6 +207,8 @@ section.beer-list {
 
 section.beer-detail {
   padding-bottom: 120px;
+  max-width: 576px;
+  margin: 0 auto;
 
   article {
     padding: 50px;
@@ -206,6 +220,7 @@ section.beer-detail {
 
       div.img-container {
         margin: 0 auto;
+
         img {
           height: 400px;
         }

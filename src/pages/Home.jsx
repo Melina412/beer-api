@@ -11,7 +11,7 @@ const Home = () => {
       />
 
       <NavCard
-        page={`/beers/random/:id`}
+        page={`/beers/random`}
         img="/img/random-beer.png"
         option="Random Beer"
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, a, eleifend vitae varius venenatis. "
