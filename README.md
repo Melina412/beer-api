@@ -1,8 +1,19 @@
-# React + Vite
+# Deployment ➡️ [Beer API](https://melina412.github.io/Day56/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Preview
 
-Currently, two official plugins are available:
+### home page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![preview 1](/public/img/beerapi-preview-1.png)
+
+### beer list
+
+![preview 2](/public/img/beerapi-preview-2.png)
+
+### beer details
+
+![preview 3](/public/img/beerapi-preview-3.png)
+
+## API info
+
+random beer api call is loading two datasets quickly one after another. this error is caused by the api itself.
