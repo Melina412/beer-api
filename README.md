@@ -1,5 +1,3 @@
-# Deployment ➡️ [Beer API](https://melina412.github.io/Day56/)
-
 ## Preview
 
 ### home page

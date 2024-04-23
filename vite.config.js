@@ -5,6 +5,5 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   // base: '/Day56/', // git repo name
-
-  base: process.env.NODE_ENV === 'production' ? '/Day56/' : '/',
+  //! das geht so nicht wegen den routen, die base wird vom router als route interpretiert :(
 });
